@@ -20,6 +20,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    @IBOutlet weak var labelId: UILabel!
+    @IBOutlet weak var labelPassword: UILabel!
+    @IBOutlet weak var textId: UITextField!
+    @IBOutlet weak var buttonConnection: UIButton!
+    @IBOutlet weak var buttonNewAccount: UIButton!
+    @IBOutlet weak var textPassword: UITextField!
+    
+  
+    @IBAction func buttonConnection(_ sender: Any) {
+        labelId.text = "taGrossMere"
+    }
+    
+    @IBAction func touchDownNewAccount(_ sender: UIButton) {
+    }
+    
 }
 
