@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var user:User = User(Username:"Nunutte", Password:"a", Email:"email@mail.com", PhoneNumber:"06000000", LastName:"lePrenom", FirstName:"LeNom", PostalAddress:"address")
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func touchDownNewAccount(_ sender: UIButton) {
+        
     }
     
 }
