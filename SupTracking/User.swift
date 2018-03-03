@@ -23,31 +23,31 @@ public class User{
         self.email = Email
         self.phoneNumber = PhoneNumber
         self.lastName = LastName
-        self.firstName = firstName
+        self.firstName = FirstName
         self.postalAddress = PostalAddress
     }
     
-    public func getUsername(){
+    public func getUsername() -> String {
         return self.username
     }
     
-    public func getEmail(){
+    public func getEmail() -> String {
         return self.email
     }
     
-    public func getPhoneNumber(){
+    public func getPhoneNumber() -> String {
         return self.phoneNumber
     }
     
-    public func getLastName(){
+    public func getLastName() -> String {
         return self.lastName
     }
     
-    public func getFirstName(){
+    public func getFirstName() -> String {
         return self.firstName
     }
     
-    public func getPostalAddress(){
+    public func getPostalAddress() -> String {
         return self.postalAddress
     }
 }
