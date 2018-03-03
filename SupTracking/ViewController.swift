@@ -48,65 +48,34 @@ class ViewController: UIViewController {
             "password": "\(password)"
         ]
         
-        let url = URL(string: "http://supinfo.steve-colinet.fr/suptracking/")!
-        //var request = URLRequest(url: url!)
+        let url = "http://supinfo.steve-colinet.fr/suptracking/"
         
-        //let httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
-        //request.httpBody = httpBody
-        
-        let session = URLSession.shared
-        var request = URLRequest(url: url)
+        let request = NSMutableURLRequest(url: URL(string: url)!)
+        let postString = "action=login&login=admin&password=admin"
         request.httpMethod = "POST"
+        request.httpBody = postString.data(using: String.Encoding.utf8)
         
-        do {
-            let data = try? JSONSerialization.data(withJSONObject: parameters, options:.prettyPrinted) // pass dictionary to nsdata object and set it as request body
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = data
-        } catch let error {
-            print(error.localizedDescription)
+        
+        let requestAPI = URLSession.shared.dataTask(with: request as URLRequest) {data, response, error in
+            if (error != nil) {
+                print(error!.localizedDescription) // On indique dans la console ou est le problème dans la requête
+            }
+            if let httpStatus = response as? HTTPURLResponse , httpStatus.statusCode != 200 {
+                print("statusCode devrait être de 200, mais il est de \(httpStatus.statusCode)")
+                print("réponse = \(response)") // On affiche dans la console si le serveur ne nous renvoit pas un code de 200 qui est le code normal
+            }
+            
+            let responseAPI = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+            print("responseString = \(responseAPI)") // Affiche dans la console la réponse de l'API
+            
+            if error == nil {
+                // Ce que vous voulez faire.
+            }
         }
-        /*
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        */
-        let task = session.dataTask(with: request as URLRequest, completionHandler: { data, response, error in
-            
-            guard error == nil else {
-                return
-            }
-            
-            guard let data = data else {
-                return
-            }
-            
-            do {
-                //create json object from data
-                
-                if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                    print(json)
-                    // handle json...
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        })
-        task.resume()
-        /*
-        session.dataTask(with: request) { (data, response, error) in
-            if let response = response{
-                print(response)
-            }
-            
-            if let data = data{
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
-                    print(json)
-                } catch{
-                    print(error)
-                }
-            }
-        }.resume()*/
-        //labelId.text = passedData.getUsername()
+        requestAPI.resume()
+        
+        
+       
     }
     
    
