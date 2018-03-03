@@ -27,11 +27,26 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var postalAddressText: UITextField!
     
-    
+    var user:User? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func ConfirmUserCreation(_ sender: Any) {
+         self.user = User(Username: self.usernameText.text!, Password: self.passwordText.text!, Email:self.emailText.text!, PhoneNumber: self.phoneText.text!, LastName: self.nameText.text!, FirstName: self.firstnameText.text!, PostalAddress: self.postalAddressText.text!)
+        performSegue(withIdentifier: "User", sender: user)
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        var DestViewController: ViewController = segue.destination as! ViewController
+        
+        DestViewController.passedData = self.user
+        
+    }
+    
 }

@@ -92,6 +92,9 @@
                                 <rect key="frame" x="145" y="394" width="85" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Valider"/>
+                                <connections>
+                                    <action selector="ConfirmUserCreation:" destination="URN-Sb-ipB" eventType="touchUpInside" id="qqw-55-VhC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nom d'utilisateur :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gls-ag-pP8">
                                 <rect key="frame" x="27" y="86" width="139" height="21"/>
@@ -211,8 +214,6 @@
                         <viewLayoutGuide key="safeArea" id="Njo-26-v0g"/>
                     </view>
                     <connections>
-                        <outlet property="NouvelUtilisateurLabel" destination="2Cg-l4-qdO" id="LmW-j6-Bgd"/>
-                        <outlet property="UsernameLAbel" destination="gls-ag-pP8" id="DnW-yV-iSp"/>
                         <outlet property="emailLabel" destination="1HK-nK-71B" id="dlL-5c-rbj"/>
                         <outlet property="emailText" destination="mHV-Ph-g6f" id="GrT-C2-qOp"/>
                         <outlet property="firstNameLabel" destination="dj2-uU-Vf8" id="iB4-78-2nu"/>
@@ -222,13 +223,13 @@
                         <outlet property="newUserLabel" destination="2Cg-l4-qdO" id="dPJ-JI-lUq"/>
                         <outlet property="passwordLabel" destination="ogO-PZ-ZCA" id="6XE-N6-W8R"/>
                         <outlet property="passwordText" destination="3wJ-OK-xcX" id="D2v-zK-WpL"/>
-                        <outlet property="phoneLAbel" destination="LTp-l3-Ofb" id="2GP-N3-YBr"/>
                         <outlet property="phoneLabel" destination="LTp-l3-Ofb" id="sri-iN-fPf"/>
                         <outlet property="phoneText" destination="GWY-iI-2Nv" id="R9x-7x-O7c"/>
                         <outlet property="postalAddressLabel" destination="ghG-9I-GFQ" id="6Vy-Jz-Td6"/>
                         <outlet property="postalAddressText" destination="DmJ-8l-L9t" id="7Ol-ed-9Oo"/>
                         <outlet property="usernameLabel" destination="gls-ag-pP8" id="3LR-ni-NVQ"/>
                         <outlet property="usernameText" destination="PvZ-JZ-qG3" id="8T7-IP-hnh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="icb-D9-beZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgs-mu-Hvb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -236,4 +237,7 @@
             <point key="canvasLocation" x="773.60000000000002" y="117.39130434782609"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="icb-D9-beZ"/>
+    </inferredMetricsTieBreakers>
 </document>

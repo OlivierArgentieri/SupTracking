@@ -30,9 +30,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var buttonNewAccount: UIButton!
     @IBOutlet weak var textPassword: UITextField!
     
+    var passedData: User!
   
     @IBAction func buttonConnection(_ sender: Any) {
-        labelId.text = "taGrossMere"
+        labelId.text = passedData.getUsername()
     }
     
     @IBAction func touchDownNewAccount(_ sender: UIButton) {
