@@ -38,20 +38,10 @@ class ViewController: UIViewController {
         let password:String? = self.textPassword.text
         
         
-        let headers = [
-            "contente-type" : "application/type",
-            "cache-control" : "no-cache"
-        ]
-        
-        let parameters = [
-            "login": "\(username)",
-            "password": "\(password)"
-        ]
-        
         let url = "http://supinfo.steve-colinet.fr/suptracking/"
         
         let request = NSMutableURLRequest(url: URL(string: url)!)
-        let postString = "action=login&login=admin&password=admin"
+        let postString = "action=login&login=\(username!)&password=\(password!)"
         request.httpMethod = "POST"
         request.httpBody = postString.data(using: String.Encoding.utf8)
         
@@ -74,8 +64,6 @@ class ViewController: UIViewController {
         }
         requestAPI.resume()
         
-        
-       
     }
     
    
