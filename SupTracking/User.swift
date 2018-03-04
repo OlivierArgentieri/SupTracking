@@ -26,6 +26,17 @@ public class User{
         self.firstName = FirstName
         self.postalAddress = PostalAddress
     }
+  
+    init () {
+        self.username =  ""
+        self.password = ""
+        self.email = ""
+        self.phoneNumber = ""
+        self.lastName = ""
+        self.firstName = ""
+        self.postalAddress = ""
+    }
+    
     
     public func getUsername() -> String {
         return self.username
