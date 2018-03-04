@@ -52,6 +52,11 @@ class ConnectVC: UIViewController {
                 let region = MKCoordinateRegionMakeWithDistance(coordinate, 1000, 1000)
                 self.MKVMap.setRegion(region, animated: true)
                 
+                let annotation = MKPointAnnotation()
+                
+                annotation.coordinate = coordinate
+                annotation.title = "Your car"
+                self.MKVMap.addAnnotation(annotation)
             }
             
             // convert string to NSData

@@ -58,7 +58,7 @@ class ViewController: UIViewController {
                 }
             }else{
                 
-            } //d
+            }
         }
         
     }
