@@ -64,6 +64,17 @@ class ViewController: UIViewController {
                 let user = json!!["user"] as? [String:Any]
                 let firstname:String = (user!["firstname"] as? String)!
                 print(firstname)
+                
+                self.passedData = User(Username: (user!["username"] as? String)!,
+                    Password: (user!["password"] as? String)!,
+                    Email:(user!["email"] as? String)!,
+                    PhoneNumber:(user!["phone"] as? String)!,
+                    LastName:(user!["lastname"] as? String)!,
+                    FirstName:(user!["firstname"] as? String)!,
+                    PostalAddress:(user!["address"] as? String)!)
+                
+                print(self.passedData.getUsername())
+                
             }
             
         
