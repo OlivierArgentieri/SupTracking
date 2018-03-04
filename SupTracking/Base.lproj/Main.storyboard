@@ -45,6 +45,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="buttonConnection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qcp-gv-wrU"/>
+                                    <segue destination="xlY-aL-DxO" kind="show" id="jJx-p1-IFR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="os4-JR-L05">
@@ -152,12 +153,17 @@ Also, you can define some area where this alarm will be down for a moment, like 
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-hr-XlZ">
+                                <rect key="frame" x="49" y="166" width="277" height="335"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Rgl-39-Wog"/>
                     </view>
                     <connections>
                         <outlet property="CordLabel" destination="lre-RQ-SCy" id="uo0-T2-mlo"/>
+                        <outlet property="MKVMap" destination="nzu-hr-XlZ" id="oa7-bw-Jws"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAp-AK-WIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,6 +172,6 @@ Also, you can define some area where this alarm will be down for a moment, like 
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ruG-m7-uhH"/>
+        <segue reference="RhR-N2-MVq"/>
     </inferredMetricsTieBreakers>
 </document>
