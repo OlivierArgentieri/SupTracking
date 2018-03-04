@@ -57,7 +57,20 @@ class ViewController: UIViewController {
             
             let responseAPI = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
             print("responseString = \(responseAPI)") // Affiche dans la console la réponse de l'API
+        
+         let  json = try? JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as? [String:Any]
+            if (json!!["success"] as? Bool)!
+            {
+                let user = json!!["user"] as? [String:Any]
+                let firstname:String = (user!["firstname"] as? String)!
+                print(firstname)
+            }
             
+        
+            
+            
+            
+            // convert string to NSData
             if error == nil {
                 // Ce que vous voulez faire.
             }
