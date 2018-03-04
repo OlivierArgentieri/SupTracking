@@ -16,11 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnConnexion: UIButton!
     
     var passedData: User! = nil
+    var urlAPI:String = "http://supinfo.steve-colinet.fr/suptracking/"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.textId.text = "admin"
         self.textPassword.text = "admin"
+        
         /*var user:User = User(Username:"Nunutte", Password:"a", Email:"email@mail.com", PhoneNumber:"06000000", LastName:"lePrenom", FirstName:"LeNom", PostalAddress:"address")
         */
         // Do any additional setup after loading the view, typically from a nib.
@@ -86,14 +89,8 @@ class ViewController: UIViewController {
             }
         }
         requestAPI.resume()
-    
         
     }
-    
-    
-       
-        
-    
     
 }
 
