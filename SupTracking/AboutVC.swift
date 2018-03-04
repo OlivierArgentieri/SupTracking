@@ -1,4 +1,3 @@
-//
 //  AboutVC.swift
 //  SupTracking
 //
@@ -10,8 +9,10 @@ import UIKit
 
 class AboutVC: UIViewController {
 
+    @IBOutlet weak var textViewAbout: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        textViewAbout.textAlignment = NSTextAlignment.center
 
         // Do any additional setup after loading the view.
     }
