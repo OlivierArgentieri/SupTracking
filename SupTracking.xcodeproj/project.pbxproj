@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A78C3FAA2049A97200F860C8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C3FA92049A97200F860C8 /* User.swift */; };
-		A78C3FB2204A63A500F860C8 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78C3FB1204A63A500F860C8 /* RegisterVC.swift */; };
 		A7DE72C92047A3A3001E0A95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE72C82047A3A3001E0A95 /* AppDelegate.swift */; };
 		A7DE72CB2047A3A3001E0A95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DE72CA2047A3A3001E0A95 /* ViewController.swift */; };
 		A7DE72CE2047A3A3001E0A95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7DE72CC2047A3A3001E0A95 /* Main.storyboard */; };
@@ -37,7 +36,6 @@
 
 /* Begin PBXFileReference section */
 		A78C3FA92049A97200F860C8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		A78C3FB1204A63A500F860C8 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		A7DE72C52047A3A3001E0A95 /* SupTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DE72C82047A3A3001E0A95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7DE72CA2047A3A3001E0A95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				A7DE72D12047A3A3001E0A95 /* LaunchScreen.storyboard */,
 				A7DE72D42047A3A3001E0A95 /* Info.plist */,
 				A78C3FA92049A97200F860C8 /* User.swift */,
-				A78C3FB1204A63A500F860C8 /* RegisterVC.swift */,
 			);
 			path = SupTracking;
 			sourceTree = "<group>";
@@ -266,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7DE72CB2047A3A3001E0A95 /* ViewController.swift in Sources */,
-				A78C3FB2204A63A500F860C8 /* RegisterVC.swift in Sources */,
 				A78C3FAA2049A97200F860C8 /* User.swift in Sources */,
 				A7DE72C92047A3A3001E0A95 /* AppDelegate.swift in Sources */,
 			);
