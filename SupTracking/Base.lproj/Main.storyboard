@@ -137,20 +137,21 @@ It is an alarm for your vehicule : for example, when the car fit with the locati
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
+                                    <action selector="OnClickLogout:" destination="xlY-aL-DxO" eventType="touchUpInside" id="0Pe-eb-qih"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="RhR-N2-MVq"/>
                                 </connections>
                             </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-hr-XlZ">
+                                <rect key="frame" x="0.0" y="60" width="375" height="335"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lre-RQ-SCy">
-                                <rect key="frame" x="166" y="13" width="42" height="21"/>
+                                <rect key="frame" x="146" y="31" width="82" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-hr-XlZ">
-                                <rect key="frame" x="0.0" y="42" width="375" height="335"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Rgl-39-Wog"/>
@@ -158,6 +159,7 @@ It is an alarm for your vehicule : for example, when the car fit with the locati
                     <connections>
                         <outlet property="CordLabel" destination="lre-RQ-SCy" id="uo0-T2-mlo"/>
                         <outlet property="MKVMap" destination="nzu-hr-XlZ" id="oa7-bw-Jws"/>
+                        <outlet property="onClickLogout" destination="8ub-jh-Mg4" id="D1c-Qo-H9P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAp-AK-WIk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,6 +168,6 @@ It is an alarm for your vehicule : for example, when the car fit with the locati
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ruG-m7-uhH"/>
+        <segue reference="RhR-N2-MVq"/>
     </inferredMetricsTieBreakers>
 </document>
