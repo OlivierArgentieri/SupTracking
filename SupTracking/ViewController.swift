@@ -16,16 +16,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnConnexion: UIButton!
     
     var passedData: User! = nil
-    var urlAPI:String = "http://supinfo.steve-colinet.fr/suptracking/"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.textId.text = "admin"
         self.textPassword.text = "admin"
-        
-        /*var user:User = User(Username:"Nunutte", Password:"a", Email:"email@mail.com", PhoneNumber:"06000000", LastName:"lePrenom", FirstName:"LeNom", PostalAddress:"address")
-        */
         // Do any additional setup after loading the view, typically from a nib.
     }
    
@@ -37,12 +33,7 @@ class ViewController: UIViewController {
         useAPI.userLogin(login:username!, password:password!) { (completed, result) in
             if (completed){
                 if (result["success"] as? Bool)!{
-                    print(result)
-                    
                     let user = result["user"] as? [String:Any]
-                    let firstname:String = (user!["firstname"] as? String)!
-                    print(firstname)
-                    
                     self.passedData = User(Username: (user!["username"] as? String)!,
                                            Password: (user!["password"] as? String)!,
                                            Email:(user!["email"] as? String)!,
@@ -50,14 +41,11 @@ class ViewController: UIViewController {
                                            LastName:(user!["lastname"] as? String)!,
                                            FirstName:(user!["firstname"] as? String)!,
                                            PostalAddress:(user!["address"] as? String)!)
-                    
                     print(self.passedData.getUsername())
-                    let myVC = self.storyboard!.instantiateViewController(withIdentifier: "ConnectVC") as! ConnectVC
-                    myVC.s = self.passedData.getUsername()
-                    self.navigationController?.pushViewController(myVC, animated: true)
+                    globalUser.sharedInstance.setGlobalUser(newUser: self.passedData)
                 }
-            }else{
-                
+            } else {
+                // TODO
             }
         }
         

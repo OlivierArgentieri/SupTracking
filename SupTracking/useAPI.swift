@@ -11,6 +11,7 @@ import Foundation
 class useAPI {
     // Used to make an Asynchronous return
     typealias StringCompletion = (_ success: Bool, _ returnType: [String:Any]) -> Void
+    // URL used to contact API
     static let firstUrl:String = "http://supinfo.steve-colinet.fr/suptracking/"
     
     /*

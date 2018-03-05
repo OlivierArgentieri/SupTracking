@@ -42,6 +42,10 @@ public class User{
         return self.username
     }
     
+    public func getPassword() -> String {
+        return self.password
+    }
+    
     public func getEmail() -> String {
         return self.email
     }
