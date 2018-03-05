@@ -45,7 +45,6 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="buttonConnection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qcp-gv-wrU"/>
-                                    <segue destination="xlY-aL-DxO" kind="show" id="jJx-p1-IFR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkH-lq-gpe">
@@ -73,6 +72,7 @@
                         <outlet property="labelPassword" destination="xkH-lq-gpe" id="uRA-Ej-QJV"/>
                         <outlet property="textId" destination="D9O-je-WQA" id="LOy-bO-Zqz"/>
                         <outlet property="textPassword" destination="Xc2-hF-xDc" id="FVl-5K-UyQ"/>
+                        <segue destination="xlY-aL-DxO" kind="show" identifier="LoginCompleted" id="lU8-Z7-Xnn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -25,7 +25,13 @@ final class globalUser {
     
     // Used to set a new globalUser
     func setGlobalUser(newUser: User) {
-        self.user = newUser
+        self.user = User(Username: newUser.getUsername(),
+                         Password: newUser.getPassword(),
+                         Email: newUser.getEmail(),
+                         PhoneNumber: newUser.getPhoneNumber(),
+                         LastName: newUser.getLastName(),
+                         FirstName: newUser.getFirstName(),
+                         PostalAddress: newUser.getPostalAddress())
         self.userIsLogin = true
     }
     

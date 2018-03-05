@@ -43,6 +43,11 @@ class ViewController: UIViewController {
                                            PostalAddress:(user!["address"] as? String)!)
                     print(self.passedData.getUsername())
                     globalUser.sharedInstance.setGlobalUser(newUser: self.passedData)
+                    
+                    OperationQueue.main.addOperation{
+                        [weak self] in
+                        self?.performSegue(withIdentifier: "LoginCompleted", sender: self)
+                    }
                 }
             } else {
                 // TODO

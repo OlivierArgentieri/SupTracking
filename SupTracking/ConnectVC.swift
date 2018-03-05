@@ -20,9 +20,10 @@ class ConnectVC: UIViewController {
     
     override func viewDidLoad() {
         //super.viewDidLoad()
-        
+        print(globalUser.sharedInstance.isConnected())
         if(globalUser.sharedInstance.isConnected()){
-            print(globalUser.sharedInstance.getGlobalUser().getUsername())
+            
+            self.CordLabel.text = "PD"
             useAPI.getCarPosition(login: globalUser.sharedInstance.getGlobalUser().getUsername(), password: globalUser.sharedInstance.getGlobalUser().getPassword()) { (completed, result) in
                 if (completed){
                     if (result["success"] as? Bool)!{
