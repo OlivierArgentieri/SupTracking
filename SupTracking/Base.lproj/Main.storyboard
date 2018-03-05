@@ -103,13 +103,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HNf-RT-6qg">
-                                <rect key="frame" x="10" y="68" width="354" height="207"/>
+                                <rect key="frame" x="10" y="68" width="354" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">This app as been created by students from SUPINFO, Olivier Argentieri, Dorian Guilmain, Kevin Rouanne and Jean Marius in a case of a schoolwork.
 
-It is an alarm for your vehicule : for example, when the car fit with the location system is in movement, our appli send a signal to the phone if the owner is not on his car or if he don't update his location since the appli is launched.
-Also, you can define some area where this alarm will be down for a moment, like parking or home.</string>
+It is an alarm for your vehicule : for example, when the car fit with the location system is in movement, our appli send a signal to the phone if the owner is not on his car or if he don't update his location since the appli is launched.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
